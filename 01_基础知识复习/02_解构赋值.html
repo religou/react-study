@@ -40,7 +40,30 @@
     */
     arr = ['孙悟空', '猪八戒', '沙和尚', '唐僧']
     const [g, h] = arr
-    console.log(g, h);
+    console.log(g, h)
+
+
+    /**
+     * 对象解构
+    */
+    const obj = {
+      name: "孙悟空",
+      age: 18,
+      sex: '男'
+    }
+
+    // 将 name 赋值给 a, age 赋值给 b, sex 赋值给 c
+    //   ({ name: a, age: b, sex: c }) = obj
+    // console.log(a, b, c)
+
+    const { name, age, sex } = obj
+    console.log(name, age, sex)
+
+    // 可以使用数组的解构来交换变量的位置
+    a = 10
+    b = 20
+    [b, a] = [a, b]
+    console.log(a, b);
   </script>
 </head>
 
