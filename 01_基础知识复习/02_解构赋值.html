@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>解构赋值</title>
+
+  <script>
+    let a, b
+    let arr = ['孙悟空', '猪八戒'];
+
+    /**
+     * 原来的方式
+     * let a = arr[0];
+     * let b = arr[1];
+    */
+    [a, b] = arr
+
+    // 申明时直接赋值
+    const [c, d] = ['孙悟空', '猪八戒']
+    console.log(a, b)
+
+    // 函数返回值的解构 
+    function fn () {
+      return ['沙和尚', '唐僧']
+    }
+    const [e, f] = fn()
+    console.log(e, f)
+
+    /**
+     * 解构部分的变量
+     * 会按照顺序去解构
+     * 不需要其中的某个变量时
+     *    - 使用空格跳过中间变量
+     * 将多个值赋予给一个变量时
+     *    - [a, b, ...c] c 即是剩余的值
+     *    - 剩余元素必须得放在最后，不能是放在中间
+    */
+    arr = ['孙悟空', '猪八戒', '沙和尚', '唐僧']
+    const [g, h] = arr
+    console.log(g, h);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
