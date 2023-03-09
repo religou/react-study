@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01变量</title>
+
+  <script>
+    // var 没有块级作用域
+    // let 没有块级作用域
+    // const 和let类似，只能赋值一次，无法进行修改
+    function fn () {
+      var a = 20
+    }
+    console.log(a)
+
+    function fn1 () {
+      let b = 30
+    }
+    console.log(b)
+
+    const c = 44
+    c = "hello"
+    console.log(c);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
