@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>箭头函数的特点</title>
+  <script>
+
+    /**
+     * 1. 箭头函数中没有 argumens, 只有 args
+     *    - 首先在原生的js中，arguments 的显示形式不为数组，所以无法使用数组的方法
+     *    - 而 args 则是以数组的形式展示，所以可以使用数组的方法
+     * 
+     * 2. 箭头函数的 this 指向的最外层函数
+    */
+    const fn1 = (...args) => {
+      console.log(args)
+    }
+    fn1()
+    fn1(1, 2, 3)
+
+    const fn2 = () => {
+      console.log(this)
+    }
+    // 输出的是 window 因为箭头函数的外层函数就是 window
+    fn2()
+
+    const fn3 = {
+      a: () => {
+        console.log(this)
+      }
+    }
+
+    // 输出的仍然是 window ，虽然被对象包裹，但是箭头函数的外层函数就是 window，
+    fn3.a()
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
