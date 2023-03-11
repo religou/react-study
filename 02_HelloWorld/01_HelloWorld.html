@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <script src="./script/react.development.js"></script>
+  <script src="./script/react-dom.development.js"></script>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script>
+    /**
+     * 原始在空白界面中添加元素的写法
+     *    - 首先创建块级元素
+     *    - 然后为块级元素赋值
+     *    - 最后将块级元素插入到根元素下
+    */
+    const ele = document.createElement('div')
+    ele.innerText = '使用原生 DOM 创建元素'
+    const root = document.getElementById('root')
+    root.appendChild(ele)
+
+
+    /**
+     * 使用 React-DOM 在页面中创建元素
+     *    - 首先引入两个外部的 js 文件
+     * 
+     *    - 然后使用 createElement 方法创建元素，创建出来的元素为 React 元素，并非是 Dom 元素
+     *      - 有三个元素
+     *      - 第一个元素是元素类型
+     *      - 第二个元素是元素的属性，比如：ID
+     *      - 第三个元素是元素的值
+     * 
+     *    - 再然后使用 createRoot 方法创建出根元素
+     * 
+     *    - 最后在根元素上渲染出创建的元素
+    */
+    const ele1 = React.createElement('div', {}, '使用 React Dom 创建元素')
+    const root1 = ReactDOM.createRoot(document.getElementById('root'))
+    root1.render(ele1)
+  </script>
+</body>
+
+</html>
