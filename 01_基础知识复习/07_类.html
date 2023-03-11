@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>类</title>
+
+  <script>
+    /**
+     * 类的定义：
+     *    - 类是对象的抽象
+     *    - 使用 class ClassName，类名需要大写
+    */
+    class Student {
+      name = "学生1"
+      age = 25
+
+      constructor(name, age) {
+        console.log("有参构造器执行")
+        this.name = name
+        this.age = age
+      }
+    }
+
+    // 通过类创建对象
+    const s1 = new Student()
+    console.log(s1)
+
+    /**
+     * 带有构造器的类：
+     *     - 在类的内部，使用 constructor 方法
+     *     - 每次创建对象的时候，构造器都会被调用
+    */
+
+    /**
+     * 创建对象根据传入的数据，初始化对象的参数
+     *    - new Student(xxx, xxx)
+     *    - constructor(xxx, xxx) {
+     *        this.name = xxx
+     *        this.age = xxx
+     *      }
+     *    - 一个类只能有一个构造器，需要区别于 java 的有参构造器和无参构造器的用法
+    */
+    const s2 = new Student("猪八戒", 108)
+    console.log(s2);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
