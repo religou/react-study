@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>静态属性和方法</title>
+
+  <script>
+    /**
+     * 直接通过类调用的属性和方法被称为静态属性和方法
+     * 使用 static 来定义静态属性和静态方法
+    */
+    class MyMath {
+      static PI = 3.1415926;
+
+      // 注意：静态方法中的 this 不是实例对象，而是当前的类对象
+      static calcRound = (r) => {
+        return r * this.PI
+      }
+    }
+
+    const result = MyMath.calcRound(2)
+    console.log(result);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
