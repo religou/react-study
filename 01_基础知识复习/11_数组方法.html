@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组方法</title>
+  <script>
+    const arr = [1, 2, 3, 4, 5]
+
+    /**
+     * map()
+     *    - 可以根据一个的数组生成新的数组
+     *    - 需要一个回调函数作为参数，回调函数的返回会成为新数组的元素
+    */
+    let result = arr.map((item) => {
+      return item + 2
+    })
+
+    /**
+     * 回调函数有三个参数
+     *    - 第一个参数：元素
+     *    - 第二个参数：索引
+     *    - 第三个参数：原数组
+    */
+    result = arr.map((index, item, array) => {
+      console.log(index + ":" + item)
+
+      console.log()
+    })
+    console.log(result)
+
+    /**
+     * filter()
+     *    - 对原数组的过滤
+    */
+    let result1 = arr.filter((item) => {
+      if (item > 3) {
+        return item
+      }
+    })
+    console.log(result1)
+
+    /**
+     * find()
+     *    - 返回符合条件的第一个元素
+     *    - 对原数组的查找
+    */
+    let result2 = arr.find((item) => {
+      if (item > 3) {
+        return item
+      }
+    })
+    console.log(result2)
+
+    /**
+     * reduce()
+     *    - 对数组的聚合，合并数组中的元素
+     *    - prev 为前一个值
+     *    - curr 为当前值
+     *    - index 为指定开始的位置
+    */
+    let result3 = arr.reduce((prev, curr) => {
+      console.log("prev" + ":" + prev + "," + "curr" + ":" + curr)
+      return prev + curr
+    })
+    console.log(result3);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
