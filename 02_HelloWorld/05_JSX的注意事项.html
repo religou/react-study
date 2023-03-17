@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSX的注意事项</title>
+  <script src="./script/react.development.js"></script>
+  <script src="./script/react-dom.development.js"></script>
+  <script src="./script/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- 
+    1. 使用 JSX 添加元素的使用，必须只能有一个根节点
+    2. JSX 中必须都得是表达式
+    3. JSX 是 JavaScript 的语法扩展，它不是字符串也不是 HTML。
+       在使用 JSX 时需要引入 React 库。
+    4. JSX 语法中只能有一个顶级标签（元素）。
+    5. 使用组件时，首字母必须大写。
+    6. 所有的标签名必须小写，必须闭合，哪怕是单标签。
+    7. class 写成 className。
+    8. style 接收的是一个对象 {}，并不是字符串。 
+   -->
+  <script type="text/babel">
+    const jsx =
+      <div>
+        <button onClick={() => {
+          alert("点击事件")
+        }} style={{ color: 'red' }}>点击</button>
+      </div>
+
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+
+    root.render(jsx)
+  </script>
+</body>
+
+</html>
