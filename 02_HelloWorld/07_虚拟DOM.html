@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>虚拟DOM</title>
+  <script src="./script/react.development.js"></script>
+  <script src="./script/react-dom.development.js"></script>
+  <script src="./script/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- 
+    在 React 中，虚拟 DOM 是一种编程概念，它在内存中维护了一个理想的
+    或“虚拟的”用户界面表示，并通过像 ReactDOM 这样的库与“真实”的 DOM 
+    保持同步。这个过程被称为协调。
+
+    对于每个 DOM 对象，React 都有一个对应的“虚拟 DOM 对象”。虚拟 DOM 
+    对象是 DOM 对象的一种表示，就像一个轻量级副本。虚拟 DOM 对象具有
+    与真实 DOM 对象相同的属性，但它没有真实对象直接更改屏幕上内容的能
+    力。
+
+    虚拟 DOM 提供了一种机制，将手动 DOM 操作从开发人员身上抽象出来，
+    帮助我们编写更可预测的代码。它通过比较两个渲染树来确定确切发生了
+    什么变化，在实际 DOM 上只更新必要内容。
+
+    虚拟 DOM 的优点之一是它可以提高应用程序的性能。由于只更新必要的部
+    分，而不是重新渲染整个页面，所以可以减少浏览器需要执行的工作量。
+    此外，虚拟 DOM 还可以提高开发人员的工作效率，因为它抽象了许多复杂
+    的底层操作。
+
+    协调是 React 用来更新虚拟 DOM 的过程。当组件的状态或属性发生变化时
+    ，React 会创建一个新的虚拟 DOM 树，并将其与当前显示的虚拟 DOM 树进
+    行比较。然后，React 会计算出两棵树之间的差异，并仅更新必要的部分。
+    这个过程可以提高应用程序的性能，因为它避免了不必要的 DOM 操作
+
+    虚拟 DOM 的工作原理是通过在内存中维护一个虚拟 DOM 树来实现的。当组
+    件的状态或属性发生变化时，React 会创建一个新的虚拟 DOM 树，并将其
+    与当前显示的虚拟 DOM 树进行比较。然后，React 会计算出两棵树之间的差
+    异，并仅更新必要的部分。这个过程可以提高应用程序的性能，因为它避免
+    了不必要的 DOM 操作。
+    
+   -->
+  <script type="text/babel">
+
+  </script>
+</body>
+
+</html>
