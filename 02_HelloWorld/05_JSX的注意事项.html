@@ -21,16 +21,17 @@
        在使用 JSX 时需要引入 React 库。
     4. JSX 语法中只能有一个顶级标签（元素）。
     5. 使用组件时，首字母必须大写。
-    6. 所有的标签名必须小写，必须闭合，哪怕是单标签。
+    6. 所有的标签名必须小写，必须闭合，哪怕是单标签，使用{}表达式来传参。
     7. class 写成 className。
     8. style 接收的是一个对象 {}，并不是字符串。 
    -->
   <script type="text/babel">
+    const content = "按钮的内容"
     const jsx =
       <div>
         <button onClick={() => {
           alert("点击事件")
-        }} style={{ color: 'red' }}>点击</button>
+        }} style={{ color: 'red' }}>{content}</button>
       </div>
 
     const root = ReactDOM.createRoot(document.getElementById('root'))
