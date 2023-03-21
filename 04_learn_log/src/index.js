@@ -1,31 +1,6 @@
 import reactDOM from "react-dom/client"
-import "./index.css"
-
-const comp = <div className="log">
-  <div className="item">
-    <div className="date">
-      <div className="month">2023年03月</div>
-      <div className="day">20</div>
-    </div>
-
-    <div className="content">
-      <div className="desc">学习React</div>
-      <div className="during">30分钟</div>
-    </div>
-  </div>
-
-  <div className="item">
-    <div className="date">
-      <div className="month">2023年03月</div>
-      <div className="day">20</div>
-    </div>
-
-    <div className="content">
-      <div className="desc">学习React</div>
-      <div className="during">30分钟</div>
-    </div>
-  </div>
-</div>
+import App from './App'
 
 const root = reactDOM.createRoot(document.getElementById("root"))
-root.render(comp)
+// 把 App 当作组件在根组件中渲染出来
+root.render(<App></App>)
