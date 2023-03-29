@@ -1,0 +1,51 @@
+.item {
+  display: flex;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: antiquewhite;
+}
+
+.date {
+  width: 140px;
+  margin: 10px;
+  /* 不要设置padding，设置了之后圆角无法生效 */
+  /* padding: 10px; */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.month {
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.day {
+  padding: 5px;
+  background-color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content {
+  flex: auto;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.desc {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.during {
+  color: blue;
+  font-size: 18px;
+}
