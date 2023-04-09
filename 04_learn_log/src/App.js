@@ -36,6 +36,7 @@ const App = () => {
     <button onClick={add}>+1</button>
     <button onClick={updateHandler}>update user</button>
   </div>)
+
 }
 
 export default App
